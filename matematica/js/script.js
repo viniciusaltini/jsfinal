@@ -17,7 +17,7 @@ function equacao() {
             respostaCorreta = Math.round(num1 * num2);
             break;
         case '/':
-            respostaCorreta = (num1 / num2).toFixed(2); // Divisão com duas casas decimais
+            respostaCorreta = (num1 / num2).toFixed(2);
             break;
         }
     
@@ -36,8 +36,11 @@ function verificar() {
         document.getElementById("answer").textContent = "Parabéns! Você acertou!";
     } else {
         document.getElementById("answer").textContent = "Que pena! Você errou. A resposta correta é " + respostaCorreta;
-    }    
-}
+    }
+    setTimeout(() => {
+        document.getElementById("answer").textContent = "";
+    }, 3000); 
+}    
     
 
         
